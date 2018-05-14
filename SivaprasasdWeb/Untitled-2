@@ -1,0 +1,10 @@
+If you are using jQuery, you can get the size of the window or the document using jQuery methods:
+
+$(window).height();   // returns height of browser viewport
+$(document).height(); // returns height of HTML document (same as pageHeight in screenshot)
+$(window).width();   // returns width of browser viewport
+$(document).width(); // returns width of HTML document (same as pageWidth in screenshot)
+For screen size you can use the screen object in the following way:
+
+screen.height;
+screen.width;
