@@ -30,9 +30,9 @@ function GetAllFiles()
           var responseObject = JSON.parse(responseData);//responseData;//JSON.parse(responseData);
           var filesList = responseObject.all_files;
           filesList.forEach(element => {
-              data += "<p align=\"left\" style=\"width : 75%; cursor:pointer; float:left;\" data-id=\""+element.name+"\" data-option=\""+element.url+"\" onClick=\"getThisTutorial(this)\">"+element.name+"</p>";//"<p>"+element.name+"</p></br>" ;
+              data += "<p align=\"left\" style=\"cursor:pointer; float:left;\" data-id=\""+element.name+"\" data-option=\""+element.url+"\" onClick=\"getThisTutorial(this)\">"+element.name+"</p>";//"<p>"+element.name+"</p></br>" ;
           });
-          var form = document.getElementById('formDynamicData');
+          var form = document.getElementById('topicsMenu');
           form.innerHTML = data;
           //window.alert(responseData);
           //var y=document.getElementById("listview");
@@ -86,7 +86,7 @@ function getThisTutorial(e)
         if(responseData != "")
         {
           var options = JSON.parse(responseData);//responseData;//JSON.parse(responseData);
-          var form = document.getElementById('formDynamicData');
+          var form = document.getElementById('topicData');
           form.innerHTML = options.html_data;
           //window.alert(responseData);
           //var y=document.getElementById("listview");

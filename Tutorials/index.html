@@ -17,23 +17,33 @@
             </div> -->
             <div class="imageBackground">
 
-                <div class="header" style="Height:7%; Width:100%; float:left; Background-Color:Green; ">
-                    <div style="float:Left; Height:100%; Width:7vh; ">
-                        <img src="ProjFiles\Images\SigninTwo.jpg" style="Height:100%; Width:100%; "></img>
+                <!-- <div class="header" style="Height:7%; Width:100%; float:left; Background-Color:Green; "> -->
+                <div class="header" style="height:18%; width:100%; float:left; Background-Color:Green; ">
+                    <div style="height: 65%; width: 100%; float: left;">
+                        <p style="height: 100% ; width: 7hv; float: left;" >&#9776;</p>
+                        <img src="ProjFiles\Images\SigninTwo.jpg" style="height: 100% ; width: 7hv; float: left;" ></img>
+
+                        <div style="height:100%; float: left;">
+                            <button class="logButtons" onclick="OnSignInClicked()">Sign In</button>
+                            <button class="logButtons" onclick="OnSignUpClicked()">Sign Up</button>
+                        </div>
+                        <p style="height: 100% ; width: 7hv; float: left;" >&#9776;</p>
                     </div>
-                    <div style="float:Right; Height:100%; ">
-                        <button class="logButtons" onclick="OnSignInClicked()">Sign In</button>
-                        <button class="logButtons" onclick="OnSignUpClicked()">Sign Up</button>
+                    <div style="height: 35%; width: 100%; float: left;">
+                        <button class="logButtons" >Xamarin</button>
+                        <button class="logButtons" >Android</button>
+                        <button class="logButtons" >iOS</button>
                     </div>
                 </div>
                 
-                <div class="mainBody" style="Height:93%; Width:100%; float:left; Background-Color:transparent; ">
+                <!-- <div class="mainBody" style="Height:93%; Width:100%; float:left; Background-Color:transparent; "> -->
+                <div class="mainBody" style="Height:82%; Width:100%; float:left; Background-Color:transparent; margin-top: 5px ">
                     
                     <div class="bodyLeft">
                         <div style="Height:100%; Width:100%; ">
                             <div style="Height:100%; Width:100%; ">
-                                <div  class="imageLogoDiv"> <!--< style="Height:100%; Width:100%; ">-->
-                                    <img class="imageLogo" src="ProjFiles\Images\SigninTwo.jpg"></img>
+                                <div class="subTopicsDiv" id="topicsMenu"> <!--< style="Height:100%; Width:100%; ">-->
+                                    
                                 </div>
                             </div>
                         </div>
@@ -42,7 +52,7 @@
                     <div class="bodyRight"> 
                         <!--<iframe style="height:100%; width:90%; padding-left:10px; padding-right:10px; " id="frameAlterLogPages" src="" >
                         </iframe>-->
-                        <div id="formDynamicData" style="Height:100%; Width:100%; Background-Color:transparent;" >
+                        <div id="topicData" style="Height:100%; Width:100%; Background-Color:white;" >
                             
                         </div>
                     </div>
