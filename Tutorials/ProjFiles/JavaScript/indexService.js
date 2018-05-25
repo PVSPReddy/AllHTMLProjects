@@ -71,9 +71,10 @@ function GetAllFiles(e)
             var foldersList = responseObject.all_folders;
             foldersList.forEach(element => 
             {
-                data += "<button class=\"domainButton\" data-id=\""+element.folder_id+"\" data-option=\""+element.folder_name+"\" data-type=\""+element.object_type+"\" onClick=\"GetAllFiles(this)\" >"+element.folder_name+"</button>";//"<p align=\"left\" style=\"cursor:pointer; color: #000000; font-size: 11pt; font-family: Arial; float:left; width:96%; height:35px; margin:5px;\" data-id=\""+element.name+"\" data-option=\""+element.url+"\" onClick=\"getThisTutorial(this)\">"+element.name+"</p>";//"<p>"+element.name+"</p></br>" ;
+                data += "<p align=\"left\" style=\"cursor:pointer; color: #000000; font-size: 11pt; font-family: Arial; float:left; width:96%; height:35px; margin:5px;\" data-id=\""+element.folder_id+"\" data-option=\""+element.folder_name+"\" data-type=\""+element.object_type+"\" onClick=\"GetAllFiles(this)\">"+element.folder_name+"</p>";
+                //"<button class=\"domainButton\" data-id=\""+element.folder_id+"\" data-option=\""+element.folder_name+"\" data-type=\""+element.object_type+"\" onClick=\"GetAllFiles(this)\" >"+element.folder_name+"</button>";//"<p align=\"left\" style=\"cursor:pointer; color: #000000; font-size: 11pt; font-family: Arial; float:left; width:96%; height:35px; margin:5px;\" data-id=\""+element.name+"\" data-option=\""+element.url+"\" onClick=\"getThisTutorial(this)\">"+element.name+"</p>";//"<p>"+element.name+"</p></br>" ;
             });
-          var form = document.getElementById('subTopicsDiv');
+          var form = document.getElementById('topicsMenu');
           form.innerHTML = data;
 
           var requestObject2 = {"method_name":"GetAllDocumentsInFolder","service_request_data":{}};
@@ -133,7 +134,7 @@ function GetAllFiles(e)
           filesList.forEach(element => {
               data += "<p align=\"left\" style=\"cursor:pointer; color: #000000; font-size: 11pt; font-family: Arial; float:left; width:96%; height:35px; margin:5px;\" data-id=\""+element.file_id+"\" data-option=\""+element.file_name+"\" data-type=\""+element.object_type+"\" onClick=\"getThisTutorial(this)\">"+element.file_name+"</p>";//"<p>"+element.name+"</p></br>" ;
           });
-          var form = document.getElementById('subTopicsDiv');
+          var form = document.getElementById('topicsMenu');
           form.innerHTML = data;
         }
       }
