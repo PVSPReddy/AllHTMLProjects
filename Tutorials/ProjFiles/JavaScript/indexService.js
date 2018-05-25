@@ -78,7 +78,7 @@ function GetAllFiles()
           var responseObject = JSON.parse(responseData);//responseData;//JSON.parse(responseData);
           var filesList = responseObject.all_files;
           filesList.forEach(element => {
-              data += "<p align=\"left\" style=\"cursor:pointer; color: #000000; font-size: 11pt; font-family: Arial; float:left; width:96%; height:35px; margin:5px;\" data-id=\""+element.name+"\" data-option=\""+element.url+"\" onClick=\"getThisTutorial(this)\">"+element.name+"</p>";//"<p>"+element.name+"</p></br>" ;
+              data += "<p align=\"left\" style=\"cursor:pointer; color: #000000; font-size: 11pt; font-family: Arial; float:left; width:96%; height:35px; margin:5px;\" data-id=\""+element.file_id+"\" data-option=\""+element.file_name+"\" onClick=\"getThisTutorial(this)\">"+element.file_name+"</p>";//"<p>"+element.name+"</p></br>" ;
           });
           var form = document.getElementById('topicsMenu');
           form.innerHTML = data;
@@ -119,7 +119,7 @@ function getThisTutorial(e)
   {
 
   }
-  var obj = {"method_name":"ConvertDocDataToHTML","service_request_data":{"file_name":e.dataset.id,"folder_id":"1ql0PNnEIh9gyKnhq8GahnbpOxlxGHUUl"}};//{ "name":"labnol", "blog":"ctrlq", "type":"post"  }
+  var obj = {"method_name":"ConvertDocDataToHTML","service_request_data":{"file_name":e.dataset.option,"file_id":e.dataset.id}};//{ "name":"labnol", "blog":"ctrlq", "type":"post"  }
   //dbParam = JSON.stringify(obj);
   var xobj = new XMLHttpRequest();
     // xobj.overrideMimeType("application/json");
