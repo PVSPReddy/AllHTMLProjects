@@ -1,3 +1,51 @@
+function GetAllDomains()
+{
+    var data = "<button class=\"domainButton\" onClick=\"GetAllFiles()\" >Xamarin</button> <button class=\"domainButton\" click=\"GetAllFiles()\" >Android</button> <button class=\"domainButton\" click=\"GetAllFiles()\" >iOS</button>"
+    var form = document.getElementById('domainsListDiv');
+    form.innerHTML = data;
+    /*
+    var urls="";
+    var serviceURL = "https://script.google.com/macros/s/AKfycbxaS7U2U4nBYB6dndL7c1CQsLO09T7OuYHKdKKfa-vBANY_RVI/exec";
+    if(serviceURL == "")
+    {
+        // serviceURL = "https://script.google.com/macros/s/AKfycbx-jmj_70IEWRP3t5Z2QFSIkWakhYbTYvTMM2uTCCIE3ZXx0loS/exec";
+        // serviceURL = "https://script.google.com/macros/s/AKfycbxR_xKju3dN5Wfj7FTLLxCmhOgZOLtv0d7FhUhVh80JtkuJdJI/exec";
+        serviceURL = "https://script.google.com/macros/s/AKfycbxaS7U2U4nBYB6dndL7c1CQsLO09T7OuYHKdKKfa-vBANY_RVI/exec";//?Contenttype=application/json&userRequest=GetDocData";
+    }
+    else
+    {
+
+    }
+    var obj = {"method_name":"GetAllDocumentsInFolder","service_request_data":{}};//{ "name":"labnol", "blog":"ctrlq", "type":"post"  }
+    var xobj = new XMLHttpRequest();
+    xobj.onreadystatechange = function () 
+    {
+      if (xobj.readyState == 4 && xobj.status == 200)
+      {
+        var responseData = xobj.response;
+        if(responseData != "")
+        {
+            var data = "";
+          var responseObject = JSON.parse(responseData);//responseData;//JSON.parse(responseData);
+          var filesList = responseObject.all_files;
+          filesList.forEach(element => {
+              data += "<p align=\"left\" style=\"cursor:pointer; color: #000000; font-size: 11pt; font-family: Arial; float:left; width:96%; height:35px; margin:5px;\" data-id=\""+element.name+"\" data-option=\""+element.url+"\" onClick=\"getThisTutorial(this)\">"+element.name+"</p>";//"<p>"+element.name+"</p></br>" ;
+          });
+          var form = document.getElementById('topicsMenu');
+          form.innerHTML = data;
+        }
+      }
+      else
+      {
+      }
+    };
+    var headerObj = "Contenttype=application/json&userRequest=GetDocData" ;
+    var dbParam = JSON.stringify(obj);
+    xobj.open("POST", (serviceURL +"?"+ headerObj), true);
+    xobj.send(dbParam);
+    */
+}
+
 function GetAllFiles()
 {
   var urls="";
@@ -30,7 +78,7 @@ function GetAllFiles()
           var responseObject = JSON.parse(responseData);//responseData;//JSON.parse(responseData);
           var filesList = responseObject.all_files;
           filesList.forEach(element => {
-              data += "<p align=\"left\" style=\"cursor:pointer; float:left;\" data-id=\""+element.name+"\" data-option=\""+element.url+"\" onClick=\"getThisTutorial(this)\">"+element.name+"</p>";//"<p>"+element.name+"</p></br>" ;
+              data += "<p align=\"left\" style=\"cursor:pointer; color: #000000; font-size: 11pt; font-family: Arial; float:left; width:96%; height:35px; margin:5px;\" data-id=\""+element.name+"\" data-option=\""+element.url+"\" onClick=\"getThisTutorial(this)\">"+element.name+"</p>";//"<p>"+element.name+"</p></br>" ;
           });
           var form = document.getElementById('topicsMenu');
           form.innerHTML = data;
