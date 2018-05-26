@@ -54,7 +54,7 @@ function GetAllFiles(e)
   }
   else
   {
-      var requestObject = {"method_name":"GetAllDocumentsInFolder","service_request_data":{}};//{ "name":"labnol", "blog":"ctrlq", "type":"post"  }
+      var requestObject = {"method_name":"GetAllDocumentsInFolder","service_request_data":{"folder_id": e.dataset.id}};//{ "name":"labnol", "blog":"ctrlq", "type":"post"  }
   }
   if(e.dataset.type === "folder")
   {
@@ -77,7 +77,7 @@ function GetAllFiles(e)
           var form = document.getElementById('topicsMenu');
           form.innerHTML = data;
 
-          var requestObject2 = {"method_name":"GetAllDocumentsInFolder","service_request_data":{}};
+          var requestObject2 = {"method_name":"GetAllDocumentsInFolder","service_request_data":{"folder_id": e.dataset.id}};
           var xobj2 = new XMLHttpRequest();
           xobj2.onreadystatechange = function () 
           {
