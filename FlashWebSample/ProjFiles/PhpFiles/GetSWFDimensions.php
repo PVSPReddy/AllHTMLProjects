@@ -33,7 +33,7 @@ else
 
 $rawData = json_decode(file_get_contents('php://input'),true);
 
-return json_encode($rawData);
+// echo json_encode($rawData);
 
 $file = $rawData["fileUrl"];//"../../planerace.swf";
 $info = getimagesize($file);
@@ -43,7 +43,7 @@ $height = $info[1];
 // print "{$width}x{$height}\n";
 $dimensions = array("width"=>$width, "height"=>$height);
 
-return $rawData;
+// echo json_encode($dimensions);
 
 function encodeXml($responseData) {
     // creating object of SimpleXMLElement
@@ -73,7 +73,7 @@ function encodeJson($responseData) {
 
 $_response = array("message"=>"Service successful", "code"=>"1", "dimensions"=>$dimensions);
 $response = encodeJson($_response);
-return $response;
+echo $response;
 
 
 
@@ -116,7 +116,7 @@ catch(PDOException $e)
                              );
                              $jsonResponse = json_encode($responseData);
 		//var_dump("receiveservice.php".$jsonResponse);
-		return $jsonResponse;
+		echo $jsonResponse;
             //return $response;
 }
 

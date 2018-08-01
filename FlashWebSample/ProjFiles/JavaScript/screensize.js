@@ -17,7 +17,9 @@ function getDimensions()
         if (this.readyState == 4 && this.status == 200)
         {
             var myObj = JSON.parse(this.response);
-            var bodyLeftUI = document.getElementById("flashFIle");
+            var flashBox = document.getElementById("flashFIle");
+            flashBox.height = myObj.dimensions.height;
+            flashBox.width = myObj.dimensions.width;
         }
     };///Applications/XAMPP/xamppfiles/htdocs/AllHTMLProjects/FlashWebSample/ProjFiles/PhpFiles/GetSWFDimensions.php
     xmlhttp.open("POST", "./../FlashWebSample/ProjFiles/PhpFiles/GetSWFDimensions.php", true);
