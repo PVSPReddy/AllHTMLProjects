@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<title color="red">welcome</title>
+        <link rel="icon" type="image/jpg" href="TitleBarIcon.jpg" sizes="16x16">
+        <link rel="stylesheet" href="ProjFiles/CSSStyles/MyCustomStyles.css" type="text/css" media="screen" />
+       <!-- <script type="text/javascript" src="ProjFiles\JavaScript\listviewcreate.js"></script>  -->
+	</head>
+	<body bgcolor="lightgreen">
+		<center>
+            <div style=" margin:auto; width : 100%; padding: 0;">
+                <div class="pgheader">
+                    <center>
+                        <p>this is my first header in first html page with css
+                        </p>
+                        <a href="https://www.google.com" target="_blank">hello google</a>
+                        <button onclick="onAppStartOne()">Click me</button>
+                        <!-- <script type="application/javascript">
+                        function myFunction()
+                        {
+                            var url = "../LocalImages";
+  var localURL = "ProjFiles/LocalImages/";
+  var obj = { "localURL":url };
+  dbParam = JSON.stringify(obj);
+  var xobj = new XMLHttpRequest();
+    // xobj.overrideMimeType("application/json");
+    xobj.onreadystatechange = function () 
+    {
+      if (xobj.readyState == 4 && xobj.status == 200)
+      {
+        // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+        //callback(xobj.responseText);
+        var data = xobj.response;
+        var options = JSON.parse(data);
+        var optionsHTML="";
+        for(i=0; i<options.all_local_files.length; i++ )
+        {
+          data += "<div id=\"lvtemplate\" style=\" position:static; margin:auto; padding-top: 12px; padding-right: 13px; padding-bottom: 16px; padding-left: 15px; height:400px; width:160px; float:left; vertical-align:middle\">"+"\n"+"<center>"+"\n"+"<h2>"+"\n"+" hi, hello"+"\n"+"</h2>"+"\n"+"<a href=\""+localURL+options.all_local_files[i]+"\" >"+"\n"+"<img style=\"height : 200px; width : 200px; float:left\"src=\""+localURL+options.all_local_files[i]+"\" />"+"\n"+"</a>"+"\n"+"<h3>"+"\n"+"see you..."+"\n"+"</h3>"+"\n"+"</center>"+"\n"+"</div>";
+        }
+        var y=document.getElementById("listview");
+        y.innerHTML = data;
+      }
+    };
+    xobj.open("POST", "./ProjFiles/PHPServices/ReceiveService.php?userRequest=GetLocalImages", true);
+    xobj.setRequestHeader("Content-type", "application/json");
+    xobj.send(dbParam);
+                        }
+                        </script> -->
+                    </center>
+                </div>
+                <div class="pgbody">
+									<div>
+										<center>
+											<table>
+                        <form name="addURLForm" action="" onsubmit="SubmitURL(); return false;"> <!-- method="post"  enctype="multipart/form-data" -->
+                          <tr>
+                            <td>
+                              *Select predefined url
+                            </td>
+                            <td>
+                              <select name="preDefinedURLs" onchange="UpdateURL()" id="URLOptions">
+                                <option value="I have a URL">I have a URL</option>
+                              </select>
+                            </td> 
+                          </tr>
+                              <tr>
+                                <td>
+                                    *URL
+                                </td>
+                                <td>
+                                    <input type="text" name="url" id="URLValue"/>
+                                </td>                                
+                            </tr>
+                            <tr>
+                              <td>
+                                  *Set image type
+                              <td>
+                                <select name="imageTypes">
+                                  <option value="jpg">jpg</option>
+                                  <option value="gif">gif</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    *StartIndex
+                                </td>
+                                <td>
+                                    <input type="text" name="startIndex" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    *EndIndex
+                                </td>
+                                <td>
+                                    <input type="text" name="endIndex" />
+                                </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                  *Add Zero for single digit numbres
+                              <td>
+                                <select name="HasZero">
+                                  <option value="1">yes</option>
+                                  <option value="0">no</option>
+                                </select>
+                              </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" name="submitMovie" value="Submit"/>
+                                </td>
+                            </tr>
+                        </form>
+                    </table>
+										</center>
+                                    </div>
+                                    <iframe src="https://drive.google.com/embeddedfolderview?id=1wde0M43d4Fg6-To6hOt0TOCs1D2My2Wm#list" style="width:100%; height:600px; border:0;"></iframe>
+									<div id="listview" style=" margin:auto; width : 100%; padding: 0;" >
+										<!-- <script type="application/javascript" src="ProjFiles/JavaScript/listviewcreate3.js">
+										</script> -->
+									</div>
+                </div>
+                <div class="pgfooter">
+                    <p>this is my first header in first html page with css
+                    </p>
+                </div>
+            </div>
+        </center>
+        <script type="application/javascript" src="ProjFiles/JavaScript/listviewcreate3.js">
+        </script>
+	</body>
+</html>
