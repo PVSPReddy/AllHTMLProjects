@@ -94,12 +94,17 @@ function getGame()
 
 function getData()
 {
-    var data = localStorage.getItem("rhino");
+    // var data = localStorage.getItem("rhino");
     var flashBoxHolder = document.getElementById("flashFileHolder");
             flashBoxHolder.height = 1000;
             flashBoxHolder.width = 1000;
-    flashBoxHolder.innerHTML = " <embed src=\""+data+"\" id=\"flashFIle\" width=\"1000\" height=\"1000\">";
-    var kkk = localStorage.getItem("rhino");
+    //flashBoxHolder.innerHTML = " <embed src=\""+data+"\" id=\"flashFIle\" width=\"1000\" height=\"1000\">";
+    flashBoxHolder.innerHTML = "<video width=\"320\" height=\"240\" controls>" + "\n" +
+            "<source src=\"https://drive.google.com/open?id=1cTBASPXUi_WULNRTPoMWykLQ7Ay419Ed\" type=\"video/swf\">" + "\n" +
+            "<source src=\"https://drive.google.com/open?id=1cTBASPXUi_WULNRTPoMWykLQ7Ay419Ed\" type=\"video/swf\">" + "\n" + 
+            "Your browser does not support the video tag." + "\n" +
+            "</video>";
+    // var kkk = localStorage.getItem("rhino");
 }
 
 //getDimensions();
