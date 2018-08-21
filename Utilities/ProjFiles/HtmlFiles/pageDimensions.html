@@ -16,13 +16,26 @@
                 </div>
                 <div style="display: flex; height: 90%; width: 100%; float: left;">
                     <div class="presentDataDiv" id="presentData">
-                        <input type="text" id="pocHeight" />
-                        <input type="text" id="pocWidth" />
+                        <div class="inputDimensionsDiv">
+                            <input class="inputDimensionsInput" type="text" placeholder="Enter Total Screen Height" id="pocHeight" />
+                        </div>
+                        <div class="inputDimensionsDiv">
+                            <input class="inputDimensionsInput" type="text" placeholder="Enter Total Screen Width" id="pocWidth" />
+                        </div>
                         
-                        <input type="text" id="reqHeight" />
-                        <input type="text" id="reqWidth" />
+                        
+                        <div class="inputDimensionsDiv">
+                            <input class="inputDimensionsInput" type="text" placeholder="Enter Required Screen Height" id="reqHeight" onchange="reqHeightChanged();"/>
+                            <p id="reqHeightPercent" class="inputDimensionsP"></p>
+                        </div>
+                        <div class="inputDimensionsDiv">
+                            <input class="inputDimensionsInput" type="text" placeholder="Enter Required Screen Width" id="reqWidth" onchange="reqWidthChanged();"/>
+                            <p id="reqWidthPercent" class="inputDimensionsP"></p>
+                        </div>
                         
                         <button onclick="getValues();">Submit</button>
+                        <!-- <style>
+                        </style> -->
                     </div>
                     <div class="pastDataDiv" id="pastData"></div>
                 </div>

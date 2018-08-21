@@ -57,3 +57,40 @@ function OpenMenu()
         //Block of code to be executed regardless of the try / catch result
     }   
 }
+
+function reqHeightChanged()
+{
+    try 
+    {
+        var reqHeightPercent = document.getElementById("reqHeightPercent");
+        var pocHeight = document.getElementById("pocHeight");
+        var reqHeight = document.getElementById("reqHeight");
+        var percentHeight = ((reqHeight.value * 100)/pocHeight.value);
+        reqHeightPercent.innerHTML = percentHeight;
+    }
+    catch(err) {
+        //Block of code to handle errors
+    } 
+    finally {
+        //Block of code to be executed regardless of the try / catch result
+    }  
+}
+
+function reqWidthChanged()
+{
+    try 
+    {
+        var reqWidthPercent = document.getElementById("reqWidthPercent");
+        var pocWidth = document.getElementById("pocWidth");
+        var reqWidth = document.getElementById("reqWidth");
+        var percentWidth = ((reqWidth.value * 100)/pocWidth.value);
+        reqWidthPercent.innerHTML = percentWidth;
+    }
+    catch(err) {
+        //Block of code to handle errors
+    } 
+    finally {
+        //Block of code to be executed regardless of the try / catch result
+    }  
+}
+
