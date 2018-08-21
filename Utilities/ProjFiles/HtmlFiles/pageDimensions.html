@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<title color="red">welcome</title>
+        <link rel="icon" type="image/jpg" href="ProjFiles\Images\TitleBarIcon.jpg" sizes="16x16">
+        <!--<link rel="stylesheet" href="ProjFiles\CssFiles\custom_screens.css" type="text/css" media="screen" />-->
+        <link rel="stylesheet" href="..\CssFiles\PageDimensionsStyles.css" type="text/css" media="screen" />
+        <script src="../JavaScript/PageDimensionsScript.js" type="text/javascript"></script>
+	</head>
+	<body bgcolor="lightgreen">
+		<center class="bodyDimensionsDiv">
+            <div class="bodyDimensionsDiv">
+                <div style="height: 10%; width: 100%;" >
+                    <img src="../Images/MenuIcon.png" style="height:50px; width:10%; float: right;" onclick="OpenMenu();"/>
+                </div>
+                <div style="display: flex; height: 90%; width: 100%; float: left;">
+                    <div class="presentDataDiv" id="presentData">
+                        <input type="text" id="pocHeight" />
+                        <input type="text" id="pocWidth" />
+                        
+                        <input type="text" id="reqHeight" />
+                        <input type="text" id="reqWidth" />
+                        
+                        <button onclick="getValues();">Submit</button>
+                    </div>
+                    <div class="pastDataDiv" id="pastData"></div>
+                </div>
+            </div>
+		</center>
+	</body>
+</html>
