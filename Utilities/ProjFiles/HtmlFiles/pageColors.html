@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+		<title color="red">welcome</title>
+        <link rel="icon" type="image/jpg" href="ProjFiles\Images\TitleBarIcon.jpg" sizes="16x16">
+        <!--<link rel="stylesheet" href="ProjFiles\CssFiles\custom_screens.css" type="text/css" media="screen" />-->
+        <link rel="stylesheet" href="..\CssFiles\PageColorsStyles.css" type="text/css" media="screen" />
+        <script src="../JavaScript/PageColorsScript.js" type="text/javascript"></script>
+	</head>
+	<body bgcolor="lightgreen">
+		<center class="bodyColorsDiv">
+            <div class="bodyColorsDiv">
+                <div style="height: 10%; width: 100%; background-color: transparent; " >
+                    <!-- <img src="../Images/MenuIcon.png" style="height:50px; width:10%; float: right;" onclick=""/> -->
+                    <button class="submitColorsButton" style="height: 90%; width: 25%; float: right;" onclick="OpenMenu();">&#60&#60 Open History</button>
+                </div>
+                <div style="display: flex; height: 90%; width: 100%; float: left; background-color: transparent;">
+                    
+                    <div class="presentDataDiv" id="presentDataDiv">
+                        <center style="height: 100%; width: 100%" id="presentData">
+                            <div style="height: 80%; width: 80%; min-width: 300px; background-color: transparent; max-width: 500px; padding-top: 40px;">
+                                <div class="inputColorsDiv">
+                                    <p class="inputColorsP">RGB Color : </p>
+                                    <!-- <input class="inputColorsInput" type="text" placeholder="Enter R,G,B color value" id="rgbValue" onkeyup="rgbValueChanged();"/> -->
+                                    <div class="inputColorsInput" style="display: flex;">
+                                        <input class="inputColorsInput" type="text" placeholder="Enter R color value" id="rValue" onkeyup="rgbValueChanged(this);"/>
+                                        <input class="inputColorsInput" type="text" placeholder="Enter G color value" id="gValue" onkeyup="rgbValueChanged(this);"/>
+                                        <input class="inputColorsInput" type="text" placeholder="Enter B color value" id="bValue" onkeyup="rgbValueChanged(this);"/>
+                                    </div>
+                                </div>
+                                <div class="inputColorsDiv">
+                                    <p class="inputColorsP">Hex Color : </p>
+                                    <input class="inputColorsInput" type="text" placeholder="Enter Hex color value" id="hexValue" onkeyup="hexValueChanged();"/>
+                                </div>
+                                
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+
+                                <button class="submitColorsButton" onclick="getValues();">Submit / Save Data</button>
+                                
+                            </div>
+                        </center>
+                    </div>
+
+                    <div class="pastDataDiv" id="pastData"></div>
+
+                </div>
+            </div>
+		</center>
+	</body>
+</html>

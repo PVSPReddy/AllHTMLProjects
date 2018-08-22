@@ -1,0 +1,93 @@
+html, body, .bodyColorsDiv /*.mainCenterAttr */ /*.pagebody*/
+{
+    width: 100%;
+    height: 100%;/*100%;*/
+    /* min-width: 320px;
+    min-height: 480px; */
+    margin: 0px;
+    padding: 0px;
+    background-color: transparent;
+    /* background-color: darkcyan; */
+    /* overflow: hidden; */
+}
+
+.presentDataDiv
+{
+    flex: 1;
+    /* align-items: center; */
+}
+
+.pastDataDiv
+{
+    /* width: 10%; */
+    height: 90%;/*100%;*/
+    /* min-width: 320px;
+    min-height: 480px; */
+    margin: 0px;
+    padding: 0px;
+    /* float: right; */
+    /* background-color: transparent; */
+    background-color: yellow;
+    position: absolute;
+    right: 0;
+    display: block;
+    overflow: scroll;
+}
+
+.inputColorsDiv
+{ 
+    width: 100%; 
+    height: 10%;
+    /* float: left;  */
+    /* align-self: center; */
+    display:flex;
+    padding: 0%;
+    margin: 0%;
+    background-color: transparent;
+}
+
+.inputColorsP
+{
+    flex: 1;
+    text-align: left;
+    background-color: white;
+    height: 50%;
+    margin-right: 5%;
+    /* padding-left: 5%; */
+}
+
+.inputColorsInput
+{
+    flex: 4;
+    /* min-width: 300px; */
+    /* max-width: 500px; */
+}
+
+.submitColorsButton
+{
+    width: 60%;
+    height: 10%;
+    /* background-color: transparent; */
+    background-color: white;
+    border: none;
+    color: forestgreen;
+    padding: 0;/*16px 32px;*/
+    text-decoration: none;
+    margin: 0;/*4px 2px;*/
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+    border-radius: 5px;
+    outline: none;/*to remove glowing border on focus/click*/
+    /* height: 15px; */
+}
+
+@media only screen and (min-width: 481px) {
+    /* For Desktops and Tablets: */
+    
+}
+@media only screen and (max-width: 480px) {
+    /* For mobiles: */
+    
+}
