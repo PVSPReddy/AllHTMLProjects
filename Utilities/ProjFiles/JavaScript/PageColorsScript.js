@@ -278,6 +278,24 @@ function hexValueChanged()
     }  
 }
 
+function rgbToHex(r,g,b) { 
+    var hexValue = "";
+    var hex1 = Number(r).toString(16);
+    var hex2 = Number(g).toString(16);
+    var hex3 = Number(b).toString(16);
+    if (hex1.length < 2) {
+         hex1 = "0" + hex1;
+    }
+    if (hex2.length < 2) {
+        hex2 = "0" + hex2;
+    }
+   if (hex3.length < 2) {
+    hex3 = "0" + hex3;
+    }
+    hexValue = "#"+hex1+hex2+hex3;
+    return hexValue;
+  };
+
 function hexToRgb(hex) {
     var bigint = parseInt(hex, 16);
     var r = (bigint >> 16) & 255;
@@ -310,7 +328,7 @@ function componentToHex(c) {
     return hex.length == 1 ? "0" + hex : hex;
 }
 
-function rgbToHex(r, g, b) {
+function rgbToHex0(r, g, b) {
     return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 }
 
