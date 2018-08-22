@@ -11,33 +11,48 @@
 	<body bgcolor="lightgreen">
 		<center class="bodyDimensionsDiv">
             <div class="bodyDimensionsDiv">
-                <div style="height: 10%; width: 100%;" >
-                    <img src="../Images/MenuIcon.png" style="height:50px; width:10%; float: right;" onclick="OpenMenu();"/>
+                <div style="height: 10%; width: 100%; background-color: transparent; " >
+                    <!-- <img src="../Images/MenuIcon.png" style="height:50px; width:10%; float: right;" onclick=""/> -->
+                    <button class="submitDimensionsButton" style="height: 90%; width: 25%; float: right;" onclick="OpenMenu();">&#60&#60 Open History</button>
                 </div>
-                <div style="display: flex; height: 90%; width: 100%; float: left;">
-                    <div class="presentDataDiv" id="presentData">
-                        <div class="inputDimensionsDiv">
-                            <input class="inputDimensionsInput" type="text" placeholder="Enter Total Screen Height" id="pocHeight" />
-                        </div>
-                        <div class="inputDimensionsDiv">
-                            <input class="inputDimensionsInput" type="text" placeholder="Enter Total Screen Width" id="pocWidth" />
-                        </div>
-                        
-                        
-                        <div class="inputDimensionsDiv">
-                            <input class="inputDimensionsInput" type="text" placeholder="Enter Required Screen Height" id="reqHeight" onchange="reqHeightChanged();"/>
-                            <p id="reqHeightPercent" class="inputDimensionsP"></p>
-                        </div>
-                        <div class="inputDimensionsDiv">
-                            <input class="inputDimensionsInput" type="text" placeholder="Enter Required Screen Width" id="reqWidth" onchange="reqWidthChanged();"/>
-                            <p id="reqWidthPercent" class="inputDimensionsP"></p>
-                        </div>
-                        
-                        <button onclick="getValues();">Submit</button>
-                        <!-- <style>
-                        </style> -->
+                <div style="display: flex; height: 90%; width: 100%; float: left; background-color: transparent;">
+                    
+                    <div class="presentDataDiv">
+                        <center style="height: 100%; width: 100%" id="presentData">
+                            <div style="height: 80%; width: 80%; min-width: 300px; background-color: transparent; max-width: 500px; padding-top: 40px;">
+                                <div class="inputDimensionsDiv">
+                                    <p class="inputDimensionsP">Total Height : </p>
+                                    <input class="inputDimensionsInput" type="number" placeholder="Enter Total Screen Height" id="pocHeight" onkeyup="reqHeightChanged();"/>
+                                </div>
+                                <div class="inputDimensionsDiv">
+                                    <p class="inputDimensionsP">Total Width : </p>
+                                    <input class="inputDimensionsInput" type="number" placeholder="Enter Total Screen Width" id="pocWidth" onkeyup="reqWidthChanged();"/>
+                                </div>
+                                
+                                
+                                <div class="inputDimensionsDiv">
+                                    <input class="inputDimensionsInput" type="number" placeholder="Enter Required Screen Height" id="reqHeight" onkeyup="reqHeightChanged();"><!-- onchange="reqHeightChanged();"/> -->
+                                    <p id="reqHeightPercent" class="inputDimensionsP"></p>
+                                </div>
+                                <div class="inputDimensionsDiv">
+                                    <input class="inputDimensionsInput" type="number" placeholder="Enter Required Screen Width" id="reqWidth" onkeyup="reqWidthChanged();"/>
+                                    <p id="reqWidthPercent" class="inputDimensionsP"></p>
+                                </div>
+                                
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+
+                                <button class="submitDimensionsButton" onclick="getValues();">Submit / Save Data</button>
+                                
+                            </div>
+                        </center>
                     </div>
+
                     <div class="pastDataDiv" id="pastData"></div>
+
                 </div>
             </div>
 		</center>
